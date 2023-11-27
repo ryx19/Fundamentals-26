@@ -24,7 +24,7 @@ var randomNum = function (options) {
 var winNum = 0;
 var loseNum = 0;
 var drawNum = 0;
-var totalNum = 0;
+var totalNum = -1;
 var winRate = 0;
 // Add a feature to collect user name
 var userName = "";
@@ -98,7 +98,9 @@ var main = function (input) {
     }
   }
   // Define the variables here after determining game result
-  totalNum += 1;
+  if (input != "") {
+    totalNum += 1;
+  }
 
   // calculate win rate
   winRate = (winNum / totalNum) * 100;
